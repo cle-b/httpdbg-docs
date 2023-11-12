@@ -1,0 +1,10 @@
+site_name: httpdbg
+site_url: https://httpdbg-docs.readthedocs.org
+site_description: httpdbg is a tool to trace the HTTP(S) client requests in your python code. 
+site_author: cle-b
+
+nav:
+    - Home: index.md
+    - Getting Started: getting_started.md
+
+theme: readthedocs
