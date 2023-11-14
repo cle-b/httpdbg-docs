@@ -36,7 +36,7 @@ httpx.post("https://httpbin.org/post", json={"hello":"demo"})
 
 ![pyhttpdbg console](imgs/console-post-1.png)
 
-  * Open a web browser and navigate to `http://localhost:4900` to show the HTTP request information.
+  * Open a web browser and navigate to `http://localhost:4909` to show the HTTP request information.
 
 ![httpdbg web interface](imgs/console-post-2.png)
 
