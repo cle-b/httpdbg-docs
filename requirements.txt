@@ -1,1 +1,6 @@
 mkdocs
+requests
+httpx
+black
+flake8
+httpdbg
