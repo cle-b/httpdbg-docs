@@ -137,7 +137,7 @@ Execute the script using `pyhttpdbg` without any custom initiator
 (venv) ~/$ pyhttpdbg --script examples/myscript.py
 ```
 
-The initiator is a call to a httpx method
+The initiator is a call to a httpx method.
 
 ![httpdbg web interface](img/initiator-1.png)
 
@@ -147,6 +147,6 @@ Execute the script using `pyhttpdbg` and add the module `examples.mylib` as a cu
 (venv) ~/$ pyhttpdbg -i example.mylib --script examples/myscript.py
 ```
 
-The initiator is the call to the function from the module `examples.mylib`
+The initiator is the call to the function from the module `examples.mylib`.
 
 ![httpdbg web interface](img/initiator-2.png)
