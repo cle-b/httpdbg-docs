@@ -4,8 +4,8 @@
 
 _httpdbg_ is available on _pip_.
 
-```shell
-pip install httpdbg
+```console
+(venv) ~/$ pip install httpdbg
 ```
 
 ### Compatibility
@@ -23,8 +23,8 @@ You can use _httpdbg_ to trace all the HTTP requests you do in a python console:
 
  * Open a Python console using the command `pyhttpdbg`
 
-```shell
-pyhttpdbg
+```console
+(venv) ~/$ pyhttpdbg
 ```
 
  * Use a http client to perform a HTTP request
@@ -34,9 +34,9 @@ import httpx
 httpx.post("https://httpbin.org/post", json={"hello":"demo"})
 ```
 
-![pyhttpdbg console](imgs/console-post-1.png)
+![pyhttpdbg console](img/console-post-1.png)
 
   * Open a web browser and navigate to `http://localhost:4909` to show the HTTP request information.
 
-![httpdbg web interface](imgs/console-post-2.png)
+![httpdbg web interface](img/console-post-2.png)
 

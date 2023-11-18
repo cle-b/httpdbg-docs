@@ -4,7 +4,7 @@ Welcome to the _httpdbg_'s documentation!
 
 _httpdbg_ is a tool to trace the HTTP(S) client requests in your python code.
 
-![httpdbg web interface](imgs/pytest1.png)
+![httpdbg web interface](img/pytest1.png)
 
 ## Simple
 
