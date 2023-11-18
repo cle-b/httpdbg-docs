@@ -4,7 +4,7 @@ _pyhttpdbg_ is the command to use to trace the HTTP requests using _httpdbg_.
 
 ## usage
 
-To trace the HTTP requests in your Python code, execute it by using the command `pyhttpdbg` instead `python`.
+To trace the HTTP requests in your Python code, execute it by using the command `pyhttpdbg` instead of `python`.
 
 ```console
 (venv) ~/$ pyhttpdbg -h
@@ -55,7 +55,7 @@ Open `http://localhost:4909`
 
 You can use _httpdbg_ to trace all the HTTP requests done when executing a script.
 
-For this example, we will use these two files (get it [here](https://github.com/cle-b/httpdbg-docs/tree/main/example))
+For this example, we will use these two files (get it [here](https://github.com/cle-b/httpdbg-docs/tree/main/examples))
 
    * `examples/mylib.py`
 
@@ -141,7 +141,7 @@ The initiator is a call to a httpx method
 
 ![httpdbg web interface](img/initiator-1.png)
 
-Execute the script using `pyhttpdbg` by adding the import `examples.mylib` as a custom initiator.
+Execute the script using `pyhttpdbg` and add the module `examples.mylib` as a custom initiator.
 
 ```console
 (venv) ~/$ pyhttpdbg -i example.mylib --script examples/myscript.py
