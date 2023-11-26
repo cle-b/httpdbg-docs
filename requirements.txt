@@ -3,4 +3,6 @@ requests
 httpx
 black
 flake8
-httpdbg
+pytest
+httpdbg[pytest]
+pytest-html

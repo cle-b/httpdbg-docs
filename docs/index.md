@@ -6,7 +6,7 @@ _httpdbg_ is a tool to trace the HTTP(S) client requests in your python code.
 
 ![httpdbg web interface](img/pytest1.png)
 
-## Simple
+## simple
 
 Simplicity is the keyword of _httpdbg_. It requires:
 
@@ -15,13 +15,13 @@ Simplicity is the keyword of _httpdbg_. It requires:
  * no super user right
  * no code modification
 
-## Powerful
+## powerful
 
 Simple doesn't mean basic:
 
   * the HTTP request initiator is reported for each request
 
-## Integrated
+## integrated
 
 Theorically, all pure python HTTP client libraries are fully traceable by _httpdbg_. 
 

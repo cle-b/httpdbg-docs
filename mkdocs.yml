@@ -7,5 +7,6 @@ nav:
     - httpdbg: index.md
     - getting started: getting_started.md
     - pyhttpdbg: pyhttpdbg.md
+    - pytest: pytest.md
 
 theme: readthedocs
