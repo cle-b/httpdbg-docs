@@ -6,3 +6,5 @@ flake8
 pytest
 httpdbg[pytest]
 pytest-html
+notebook
+notebook-httpdbg
