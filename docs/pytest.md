@@ -71,7 +71,7 @@ You can use `httpdbg` to save the trace of the HTTP requests in your test report
 
 ### usage
 
-```
+```console
   --httpdbg             record HTTP(S) requests
   --httpdbg-dir=HTTPDBG_DIR
                         save httpdbg traces in a directory
