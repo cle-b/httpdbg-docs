@@ -1,6 +1,6 @@
-# Getting Started
+# getting started
 
-## Installation
+## installation
 
 _httpdbg_ is available on _pip_.
 
@@ -8,14 +8,14 @@ _httpdbg_ is available on _pip_.
 (venv) ~/$ pip install httpdbg
 ```
 
-### Compatibility
+### compatibility
 
 _httpdbg_ has been tested on:
 
  * Python `3.6`, `3.7`, `3.8`, `3.9`, `3.10`, `3.11`, `3.12`.
  * `Linux`, `Windows`, `MacOS`.
 
-## Usage
+## usage
 
 To use _httpdbg_, the only thing you have to do is to replace the command `python` by `pyhttpdbg`. There is no modification to do in the code itself.
 
