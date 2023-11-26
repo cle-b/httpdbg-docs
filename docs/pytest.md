@@ -1,19 +1,19 @@
 # httpdbg - pytest
 
-`pytest-httpdbg` is a plugin for `pytest`.
+You can use `httpdbg` to trace the HTTP requests in your tests for debug using `pyhttpdbg`, or to save an export of the traceq in a test report using the `pytest` plugin `pytest-httpdbg`.
 
 ## installation
 
-_httpdbg_ is available on _pip_.
+_pytest-httpdbg_ is available on _pip_.
 
 ```console
-(venv) ~/$ pip install pytest-httpdbg
+pip install pytest-httpdbg
 ```
 
 or
 
 ```console
-(venv) ~/$ pip install httpdbg[pytest]
+pip install httpdbg[pytest]
 ```
 
 ### compatibility
@@ -27,7 +27,7 @@ _pytest-httpdbg_ has been tested on:
 
 ## pyhttpdbg
 
-The `pytest-httpdbg` plugin is mandatory to trace the HTTP requests in your tests only if you use the plugin [`pytest-xdist`](https://pypi.org/project/pytest-xdist/).
+The `pytest-httpdbg` plugin is mandatory to trace the HTTP requests in your tests **only** if you want to execute the tests in parallel using the plugin [`pytest-xdist`](https://pypi.org/project/pytest-xdist/).
 
 Here is an example of test file:
 
