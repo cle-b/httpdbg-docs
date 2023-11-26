@@ -1,6 +1,6 @@
 # httpdbg - pytest
 
-You can use `httpdbg` to trace the HTTP requests in your tests for debug using `pyhttpdbg`, or to save an export of the traceq in a test report using the `pytest` plugin `pytest-httpdbg`.
+You can use `httpdbg` to trace the HTTP requests in your tests for debug using `pyhttpdbg`, or to save an export of the traces in a test report using the `pytest` plugin `pytest-httpdbg`.
 
 ## installation
 
