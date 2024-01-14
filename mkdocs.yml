@@ -9,5 +9,6 @@ nav:
     - pyhttpdbg: pyhttpdbg.md
     - pytest: pytest.md
     - notebook: notebook.md
+    - user interface: ui.md
 
 theme: readthedocs
