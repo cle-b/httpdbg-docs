@@ -8,13 +8,14 @@ To trace the HTTP requests in your Python code, execute it by using the command 
 
 ```console
 (venv) ~/$ pyhttpdbg -h
-usage: pyhttpdbg [-h] [--port PORT] [--version] [--initiator INITIATOR] [--keep-up | --force-quit]
+usage: pyhttpdbg [-h] [--host HOST] [--port PORT] [--version] [--initiator INITIATOR] [--keep-up | --force-quit]
                  [--console | --module MODULE | --script SCRIPT]
 
 httdbg - a very simple tool to debug HTTP(S) client requests
 
 options:
   -h, --help            show this help message and exit
+  --host HOST           the web interface host IP address
   --port PORT, -p PORT  the web interface port
   --version, -v         print the httpdbg version
   --initiator INITIATOR, -i INITIATOR
