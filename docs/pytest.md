@@ -20,7 +20,7 @@ pip install httpdbg[pytest]
 
 _pytest-httpdbg_ has been tested on:
 
- * Python `3.7`, `3.8`, `3.9`, `3.10`, `3.11`, `3.12`.
+ * Python `3.8`, `3.9`, `3.10`, `3.11`, `3.12`.
  * Pytest >= `7.0`.
  * `Linux`, `Windows`, `MacOS`.
 
@@ -36,15 +36,22 @@ import pytest
 import requests
 
 
+@pytest.fixture(scope="session", autouse=True)
+def get_in_a_fixture():
+    requests.get("https://httpbin.org/get/session/setup")
+    yield
+    requests.get("https://httpbin.org/get/session/teardown")
+
+
 @pytest.fixture()
-def a_post():
+def post_in_a_fixture():
     return requests.post("https://httpbin.org/post", json={"demo": "in-fixture"})
 
 
-def test_post(a_post):
-    assert a_post.status_code == 200
+def test_post(post_in_a_fixture):
+    assert post_in_a_fixture.status_code == 200
     assert (
-        requests.post("https://httpbin.org/post", json={"demo": "in-post"}).status_code
+        requests.post("https://httpbin.org/post", json={"demo": "in-test"}).status_code
         == 200
     )
 
@@ -65,9 +72,11 @@ Open `http://localhost:4909`
 
 ![httpdbg web interface](img/pytest-2.png)
 
-## pytest
+When an HTTP request is sent from a fixture, the name of the fixture is displayed in the UI. If you prefer not to see this information, you can choose to hide the tags in the UI settings. See [User interface > Configuration](ui.md) for more details.
 
-You can use `httpdbg` to save the trace of the HTTP requests in your test report.
+## pytest-httpdbg
+
+You can use the pytest plugin `pytest-httpdbg` to save the trace of the HTTP requests in your test report.
 
 ### usage
 

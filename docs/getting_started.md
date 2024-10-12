@@ -12,7 +12,7 @@ _httpdbg_ is available on _pip_.
 
 _httpdbg_ has been tested on:
 
- * Python `3.6`, `3.7`, `3.8`, `3.9`, `3.10`, `3.11`, `3.12`.
+ * Python `3.8`, `3.9`, `3.10`, `3.11`, `3.12`.
  * `Linux`, `Windows`, `MacOS`.
 
 ## usage
