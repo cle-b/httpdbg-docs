@@ -145,7 +145,7 @@ The initiator is a call to a httpx method.
 Execute the script using `pyhttpdbg` and add the module `examples.mylib` as a custom initiator.
 
 ```console
-(venv) ~/$ pyhttpdbg -i example.mylib --script examples/myscript.py
+(venv) ~/$ pyhttpdbg -i examples.mylib --script examples/myscript.py
 ```
 
 The initiator is the call to the function from the module `examples.mylib`.
