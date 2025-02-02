@@ -32,7 +32,12 @@ Some of them have a special integration for more information:
  * [aiohttp](https://pypi.org/project/aiohttp/)
  * [urllib3](https://pypi.org/project/urllib3/)
 
+Some test frameworks are also supported to provide additional information:
+
+ * [pytest](https://pypi.org/project/pytest/)
+ * [unittest](https://docs.python.org/3/library/unittest.html)
+
 Some extensions are available for different famous Python tools:
 
-  * [pytest](https://pypi.org/project/pytest/)
-  * [notebook](https://pypi.org/project/notebook/)
+  * [pytest-httpdbg](https://github.com/cle-b/pytest-httpdbg) for [pytest](https://pypi.org/project/pytest/)
+  * [notebook-httpdbg](https://github.com/cle-b/notebook-httpdbg) for [notebook](https://pypi.org/project/notebook/)
