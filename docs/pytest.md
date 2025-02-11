@@ -2,32 +2,9 @@
 
 You can use `httpdbg` to trace the HTTP requests in your tests for debug using `pyhttpdbg`, or to save an export of the traces in a test report using the `pytest` plugin `pytest-httpdbg`.
 
-## installation
-
-_pytest-httpdbg_ is available on _pip_.
-
-```console
-pip install pytest-httpdbg
-```
-
-or
-
-```console
-pip install httpdbg[pytest]
-```
-
-### compatibility
-
-_pytest-httpdbg_ has been tested on:
-
- * Python `3.8`, `3.9`, `3.10`, `3.11`, `3.12`.
- * Pytest >= `7.0`.
- * `Linux`, `Windows`, `MacOS`.
-
-
 ## pyhttpdbg
 
-The `pytest-httpdbg` plugin is mandatory to trace the HTTP requests in your tests **only** if you want to execute the tests in parallel using the plugin [`pytest-xdist`](https://pypi.org/project/pytest-xdist/).
+The `pytest-httpdbg` plugin is **not** required to trace the HTTP requests in your tests.
 
 Here is an example of test file:
 
@@ -72,9 +49,27 @@ Open `http://localhost:4909`
 
 ![httpdbg web interface](img/pytest-2.png)
 
+In that case, the requests are grouped by test, but you can switch to grouping them by initiator by changing the view mode in the UI.
+
 When an HTTP request is sent from a fixture, the name of the fixture is displayed in the UI. If you prefer not to see this information, you can choose to hide the tags in the UI settings. See [User interface > Configuration](ui.md) for more details.
 
 ## pytest-httpdbg
+
+### installation
+
+_pytest-httpdbg_ is available on _pip_.
+
+```console
+pip install pytest-httpdbg
+```
+
+### compatibility
+
+_pytest-httpdbg_ has been tested on:
+
+ * Python `3.9`, `3.10`, `3.11`, `3.12`, `3.13`.
+ * Pytest >= `7.0`.
+ * `Linux`, `Windows`, `MacOS`.
 
 You can use the pytest plugin `pytest-httpdbg` to save the trace of the HTTP requests in your test report.
 
