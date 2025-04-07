@@ -16,10 +16,17 @@ By default, we use the port `4909` but this is configurable using the command li
 
 ## Configuration
 
-To configure the user interface, click on the `open configuration` button on the top right corner. 
+The top bar includes options to customize the user interface.
 
-![ui configuration](img/ui-configuration.png)
+![ui configuration](img/ui-configuration-httpdbg121.png)
 
-After you click on the `ok` button, the url is updated to include the configuration. Bookmark it to keep this configuration each time you will use `pyhttpdbg`.
+Each customization is saved in the URL. You can bookmark it to preserve your configuration.
 
-![ui bookmark](img/ui-bookmark.png)
+This URL can be bookmarked to save the following configuration:
+
+  * Tests are grouped by session.
+  * The network location is hidden.
+  * Request and response payloads are not pretty-printed.
+```url
+http://localhost:4909/?gb=session&hn=on&rd=on
+```

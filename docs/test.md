@@ -1,10 +1,8 @@
-# httpdbg - pytest
+# test frameworks
 
-You can use `httpdbg` to trace the HTTP requests in your tests for debug using `pyhttpdbg`, or to save an export of the traces in a test report using the `pytest` plugin `pytest-httpdbg`.
+You can use `httpdbg` to trace the HTTP requests in your tests using `pyhttpdbg`
 
-## pyhttpdbg
-
-The `pytest-httpdbg` plugin is **not** required to trace the HTTP requests in your tests.
+## pytest
 
 Here is an example of test file:
 
@@ -53,9 +51,11 @@ In that case, the requests are grouped by test, but you can switch to grouping t
 
 When an HTTP request is sent from a fixture, the name of the fixture is displayed in the UI. If you prefer not to see this information, you can choose to hide the tags in the UI settings. See [User interface > Configuration](ui.md) for more details.
 
-## pytest-httpdbg
+### pytest-httpdbg
 
-### installation
+You can use the pytest plugin `pytest-httpdbg` to save the trace of the HTTP requests in your test report.
+
+#### installation
 
 _pytest-httpdbg_ is available on _pip_.
 
@@ -63,17 +63,7 @@ _pytest-httpdbg_ is available on _pip_.
 pip install pytest-httpdbg
 ```
 
-### compatibility
-
-_pytest-httpdbg_ has been tested on:
-
- * Python `3.9`, `3.10`, `3.11`, `3.12`, `3.13`.
- * Pytest >= `7.0`.
- * `Linux`, `Windows`, `MacOS`.
-
-You can use the pytest plugin `pytest-httpdbg` to save the trace of the HTTP requests in your test report.
-
-### usage
+#### usage
 
 ```console
   --httpdbg             record HTTP(S) requests
@@ -84,7 +74,7 @@ You can use the pytest plugin `pytest-httpdbg` to save the trace of the HTTP req
                         add a new initiator (package) for httpdbg
 ```
 
-### generate report
+#### generate report
 
 For this example, we will use [`pytest-html`](https://pypi.org/project/pytest-html/) to generate the report.
 
@@ -134,3 +124,14 @@ Open the test report in a browser.
 There is a link to an HTTPDBG trace export for each test. Open it using a markdown viewer.
 
 ![httpdbg markdown export](img/pytest-report-3.png)
+
+## unittest
+
+If you run your _unittest_ tests using _pyhttpdbg_, the HTTP requests will be grouped by test/setup/teardown methods.
+
+```console
+pyhttpdbg -m unittest tests/demo_run_unittest.py
+```
+
+![unittest (httpdbg 1.2.1)](img/unittest-httpdbg121.png)
+

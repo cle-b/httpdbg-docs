@@ -1,12 +1,10 @@
-# httpdbg
+# Welcome to the httpdbg's documentation!
 
-Welcome to the _httpdbg_'s documentation!
-
-_httpdbg_ is a tool to trace the HTTP(S) client requests in your python code.
+_httpdbg_ is a tool for tracing HTTP requests in your Python code for debugging purposes.
 
 ![httpdbg web interface](img/pytest1.png)
 
-## simple
+## httpdbg is easy to use
 
 Simplicity is the keyword of _httpdbg_. It requires:
 
@@ -15,22 +13,47 @@ Simplicity is the keyword of _httpdbg_. It requires:
  * no super user right
  * no code modification
 
-## powerful
+All what you have to do is to install `httpdbg` in your virtual environment:
 
-Simple doesn't mean basic:
+```console
+pip install httpdbg
+```
 
-  * the HTTP request initiator is reported for each request
+Then, replace the `python` command with `pyhttpdbg`.
 
-## integrated
+The screenshot above was obtained simply by running some tests like this:
 
-Theorically, all pure python HTTP client libraries are fully traceable by _httpdbg_. 
+```console
+pyhttpdbg -m pytest -v examples/
+```
 
-Some of them have a special integration for more information:
+## httpdbg is not ...
+
+_httpdbg_ isn’t just another proxy. It can:
+
+  * Trace HTTP requests made by your client.
+  * Trace HTTP requests received by your server.
+  * Trace HTTP requests inside your Jupyter notebook.
+  * Link HTTP requests directly to the relevant Python code.
+  * Group HTTP requests by client call, endpoint, method, test function, and more.
+
+_httpdbg_ is not a monitoring tool. It should not be used in production code, but only for debugging purposes.
+
+## httpdbg supports the major HTTP packages
+
+Theorically, all pure python HTTP requests are fully traceable by _httpdbg_. 
+
+These HTTP clients have special integrations that provide even more detailed information:
 
  * [requests](https://pypi.org/project/requests/)
  * [httpx](https://pypi.org/project/httpx/)
  * [aiohttp](https://pypi.org/project/aiohttp/)
  * [urllib3](https://pypi.org/project/urllib3/)
+
+These HTTP servers also have special integrations for enhanced insights:
+ 
+ * [fastapi](https://pypi.org/project/fastapi/)
+ * [flask](https://pypi.org/project/flask/)
 
 Some test frameworks are also supported to provide additional information:
 

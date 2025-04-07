@@ -4,11 +4,23 @@ site_description: httpdbg is a tool to trace the HTTP(S) client requests in your
 site_author: cle-b
 
 nav:
-    - httpdbg: index.md
-    - getting started: getting_started.md
+    - Introduction: index.md
+    - Getting started: getting_started.md
     - pyhttpdbg: pyhttpdbg.md
-    - pytest: pytest.md
-    - notebook: notebook.md
-    - user interface: ui.md
+    - Test frameworks: test.md
+    - Notebook: notebook.md
+    - User interface: ui.md
 
-theme: readthedocs
+theme: material
+
+repo_url: https://github.com/cle-b/httpdbg
+repo_name: cle-b/httpdbg
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

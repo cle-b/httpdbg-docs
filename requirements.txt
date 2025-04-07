@@ -1,10 +1,12 @@
 mkdocs
+mkdocs-material
 requests
 httpx
 black
 flake8
 pytest
-httpdbg[pytest]
+httpdbg
+pytest-httpdbg
 pytest-html
 notebook
 notebook-httpdbg

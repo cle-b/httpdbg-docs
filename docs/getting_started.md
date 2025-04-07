@@ -1,8 +1,8 @@
-# getting started
+# Getting started
 
 ## installation
 
-_httpdbg_ is available on _pip_.
+_httpdbg_ is available on [pip](https://pypi.org/project/httpdbg/).
 
 ```console
 (venv) ~/$ pip install httpdbg
@@ -10,16 +10,16 @@ _httpdbg_ is available on _pip_.
 
 ### compatibility
 
-_httpdbg_ has been tested on:
+_httpdbg_ currently supports:
 
  * Python `3.9`, `3.10`, `3.11`, `3.12`, `3.13`.
- * `Linux`, `Windows`, `MacOS`.
+ * `Linux`, `MacOS`, `Windows`.
 
 ## usage
 
 To use _httpdbg_, the only thing you have to do is to replace the command `python` by `pyhttpdbg`. There is no modification to do in the code itself.
 
-You can use _httpdbg_ to trace all the HTTP requests you do in a python console:
+You can use _httpdbg_ to trace all the HTTP requests you do in a Python console:
 
  * Open a Python console using the command `pyhttpdbg`
 
@@ -27,7 +27,7 @@ You can use _httpdbg_ to trace all the HTTP requests you do in a python console:
 (venv) ~/$ pyhttpdbg
 ```
 
- * Use a http client to perform a HTTP request
+ * Use a HTTP client to perform a HTTP request
 
 ```python
 import httpx
