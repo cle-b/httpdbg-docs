@@ -19,7 +19,7 @@ All what you have to do is to install `httpdbg` in your virtual environment:
 pip install httpdbg
 ```
 
-Then, replace the `python` command with `pyhttpdbg`.
+Then, replace the `python` command with `pyhttpdbg` to execute your code.
 
 The screenshot above was obtained simply by running some tests like this:
 

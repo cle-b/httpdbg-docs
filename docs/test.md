@@ -53,7 +53,7 @@ When an HTTP request is sent from a fixture, the name of the fixture is displaye
 
 ### pytest-httpdbg
 
-You can use the pytest plugin `pytest-httpdbg` to save the trace of the HTTP requests in your test report.
+You can use the pytest plugin [pytest-httpdbg](https://github.com/cle-b/pytest-httpdbg/) to save the trace of the HTTP requests in your test report.
 
 #### installation
 
@@ -65,19 +65,45 @@ pip install pytest-httpdbg
 
 #### usage
 
-```console
-  --httpdbg             record HTTP(S) requests
-  --httpdbg-dir=HTTPDBG_DIR
-                        save httpdbg traces in a directory
-  --httpdbg-no-clean    do not clean the httpdbg directory
-  --httpdbg-initiator=HTTPDBG_INITIATOR
-                        add a new initiator (package) for httpdbg
+The following options are added to the [pytest](https://pypi.org/project/pytest/) command line:
+
+```
+reporting:
+
+  --httpdbg                                 record HTTP(S) requests
+  --httpdbg-dir=HTTPDBG_DIR                 save httpdbg traces in a directory
+  --httpdbg-no-clean                        do not clean the httpdbg directory
+
+  --httpdbg-allure                          save HTTP(S) traces into the allure report
+  --httpdbg-no-headers                      do not save the HTTP headers
+  --httpdbg-no-binary                       do not save the HTTP payload if it's a binary content
+  --httpdbg-only-on-failure                 save the HTTP requests only if the test failed
+
+  --httpdbg-initiator=HTTPDBG_INITIATOR     add a new initiator (package) for httpdbg
+
 ```
 
-#### generate report
+#### allure test report
+
+If you use the [allure-pytest](https://pypi.org/project/allure-pytest/) plugin to generate an [Allure](https://allurereport.org/docs/pytest/) report, you can use [pytest-httpdbg](https://pypi.org/project/pytest-httpdbg/) to include HTTP request traces in your test report without any code modifications.
+
+All you need to do is add the `--httpdbg-allure` option to your pytest command line:
+
+```
+pytest ../httpdbg-docs/examples/ --alluredir=./allure-results --httpdbg-allure
+``` 
+
+If an HTTP request is made by the test (or within a fixture, during the setup or teardown phase), the request will be saved in the Allure report under a step called `httpdbg`.
+
+![Allure report with HTTP traces attached to each tests](img/pytest-httpdbg-allure-0.8.0.png)
+
+#### others test report
+
+You can add HTTP traces to any test report of your choice. To do this, you can use the HTTP traces saved by the plugin in Markdown format.
+
+When a test finishes (including the teardown step), a log file in Markdown format is generated. The path to this log file is stored in the test item when the test starts (before the setup step), even if the file does not yet exist.
 
 For this example, we will use [`pytest-html`](https://pypi.org/project/pytest-html/) to generate the report.
-
 
 You can copy the following code in your top-level `conftest.py` to include the logs into your report.
 
