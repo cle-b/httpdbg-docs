@@ -39,6 +39,10 @@ _httpdbg_ isn’t just another proxy. It can:
 
 _httpdbg_ is not a monitoring tool. It should not be used in production code, but only for debugging purposes.
 
+## httpdbg supports HTTP/1 and HTTP/2
+
+_httpdbg_ supports `HTTP/1.0`, `HTTP/1.1` and `HTTP/2`. For `HTTP/2`, it only traces requests made with the [h2](https://pypi.org/project/h2/) package. 
+
 ## httpdbg supports the major HTTP packages
 
 Theorically, all pure python HTTP requests are fully traceable by _httpdbg_. 
